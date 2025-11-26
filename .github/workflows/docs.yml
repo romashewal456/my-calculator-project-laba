@@ -24,12 +24,11 @@ jobs:
         run: doxygen Doxyfile
         
   # Крок 4: Деплой на GitHub Pages
-          - name: Deploy to GitHub Pages
+        - name: Deploy to GitHub Pages
             uses: peaceiris/actions-gh-pages@v3
             with:
               github_token: ${{ secrets.GITHUB_TOKEN }}
-              # Змініть шлях публікації, щоб включити папку 'html'
-              publish_dir: gh-pages
+              # ЦЕЙ ШЛЯХ МАЄ БУТИ ПРАВИЛЬНИМ:
+              publish_dir: ./docs 
               publish_branch: gh-pages
-              force_orphan: true 
-              cname:
+              force_orphan: true
