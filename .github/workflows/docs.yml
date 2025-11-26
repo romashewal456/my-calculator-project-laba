@@ -1,0 +1,34 @@
+name: Build & Deploy Doxygen Docs
+
+on:
+  # Запускати цей Workflow при кожному push у гілку main
+  push:
+    branches: [ main ] 
+  # Додатково: дозволяє запускати вручну з інтерфейсу GitHub
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Крок 1: Клонуємо репозиторій
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        
+      # Крок 2: Встановлюємо Doxygen
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen
+        
+      # Крок 3: Генеруємо документацію
+      - name: Generate Doxygen Docs
+        run: doxygen Doxyfile
+        
+      # Крок 4: Деплой на GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs 
+          publish_branch: gh-pages
+          force_orphan: true 
+          cname: 

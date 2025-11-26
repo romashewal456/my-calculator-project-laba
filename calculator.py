@@ -1,9 +1,81 @@
 
+
 import pytest
 from src.calculator import add, subtract, multiply, divide, is_even
 
 ## Тести для базової функціональності (add, subtract, multiply)
-
+class Calculator:
+    """
+    @brief Це основний клас для арифметичних операцій.
+    
+    Клас забезпечує виконання базових математичних операцій: додавання, віднімання,
+    множення та ділення, включаючи обробку помилки ділення на нуль.
+    """
+    
+    def add(self, a, b):
+        """
+        @brief Виконує додавання двох чисел.
+        
+        @param a: Перше число.
+        @param b: Друге число.
+        @return Сума чисел a та b.
+        
+        @example
+        >>> calc = Calculator()
+        >>> calc.add(5, 3)
+        8
+        """
+        return a + b
+        
+    def subtract(self, a, b):
+        """
+        @brief Виконує віднімання двох чисел.
+        
+        @param a: Зменшуване (число).
+        @param b: Від'ємник (число).
+        @return Різниця чисел a та b.
+        
+        @example
+        >>> calc = Calculator()
+        >>> calc.subtract(10, 4)
+        6
+        """
+        return a - b
+        
+    def multiply(self, a, b):
+        """
+        @brief Виконує множення двох чисел.
+        
+        @param a: Перший множник.
+        @param b: Другий множник.
+        @return Добуток чисел a та b.
+        
+        @example
+        >>> calc = Calculator()
+        >>> calc.multiply(5, 6)
+        30
+        """
+        return a * b
+        
+    def divide(self, a, b):
+        """
+        @brief Виконує ділення двох чисел.
+        
+        @param a: Ділене (число).
+        @param b: Дільник (число).
+        @return Результат ділення.
+        @throws ZeroDivisionError: Якщо дільник (b) дорівнює нулю.
+        
+        @example
+        >>> calc = Calculator()
+        >>> calc.divide(20, 4)
+        5.0
+        >>> calc.divide(10, 0) # Викличе ZeroDivisionError
+        """
+        if b == 0:
+            raise ZeroDivisionError("Ділення на нуль неможливе")
+        return a / b
+        
 def test_add_positive_numbers():
     """Тестування додавання двох позитивних чисел."""
     assert add(5, 3) == 8

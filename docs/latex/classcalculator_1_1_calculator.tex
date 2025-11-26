@@ -1,0 +1,108 @@
+\doxysection{calculator.\+Calculator Class Reference}
+\hypertarget{classcalculator_1_1_calculator}{}\label{classcalculator_1_1_calculator}\index{calculator.Calculator@{calculator.Calculator}}
+
+
+Тести для базової функціональності (add, subtract, multiply).  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcalculator_1_1_calculator_a83a3b4f80213eb6ebbe7eb28aaef5ccc}{add}} (self, a, b)
+\item 
+\mbox{\hyperlink{classcalculator_1_1_calculator_a847d8433b1af180144acd50daf545703}{subtract}} (self, a, b)
+\item 
+\mbox{\hyperlink{classcalculator_1_1_calculator_ad04537a4e043e209e31212efc67a10e4}{multiply}} (self, a, b)
+\item 
+\mbox{\hyperlink{classcalculator_1_1_calculator_ae929b29e819b2ab71fd7e8bb23c43dd4}{divide}} (self, a, b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Тести для базової функціональності (add, subtract, multiply). 
+
+\begin{DoxyVerb}@brief Це основний клас для арифметичних операцій.
+
+Клас забезпечує виконання базових математичних операцій: додавання, віднімання,
+множення та ділення, включаючи обробку помилки ділення на нуль.
+\end{DoxyVerb}
+ 
+
+\label{doc-func-members}
+\Hypertarget{classcalculator_1_1_calculator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcalculator_1_1_calculator_a83a3b4f80213eb6ebbe7eb28aaef5ccc}\index{calculator.Calculator@{calculator.Calculator}!add@{add}}
+\index{add@{add}!calculator.Calculator@{calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{classcalculator_1_1_calculator_a83a3b4f80213eb6ebbe7eb28aaef5ccc} 
+calculator.\+Calculator.\+add (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Виконує додавання двох чисел.
+
+@param a: Перше число.
+@param b: Друге число.
+@return Сума чисел a та b.
+
+@example
+>>> calc = Calculator()
+>>> calc.add(5, 3)
+8
+\end{DoxyVerb}
+ \Hypertarget{classcalculator_1_1_calculator_ae929b29e819b2ab71fd7e8bb23c43dd4}\index{calculator.Calculator@{calculator.Calculator}!divide@{divide}}
+\index{divide@{divide}!calculator.Calculator@{calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}}
+{\footnotesize\ttfamily \label{classcalculator_1_1_calculator_ae929b29e819b2ab71fd7e8bb23c43dd4} 
+calculator.\+Calculator.\+divide (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Виконує ділення двох чисел.
+
+@param a: Ділене (число).
+@param b: Дільник (число).
+@return Результат ділення.
+@throws ZeroDivisionError: Якщо дільник (b) дорівнює нулю.
+
+@example
+>>> calc = Calculator()
+>>> calc.divide(20, 4)
+5.0
+>>> calc.divide(10, 0) # Викличе ZeroDivisionError
+\end{DoxyVerb}
+ \Hypertarget{classcalculator_1_1_calculator_ad04537a4e043e209e31212efc67a10e4}\index{calculator.Calculator@{calculator.Calculator}!multiply@{multiply}}
+\index{multiply@{multiply}!calculator.Calculator@{calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}}
+{\footnotesize\ttfamily \label{classcalculator_1_1_calculator_ad04537a4e043e209e31212efc67a10e4} 
+calculator.\+Calculator.\+multiply (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Виконує множення двох чисел.
+
+@param a: Перший множник.
+@param b: Другий множник.
+@return Добуток чисел a та b.
+
+@example
+>>> calc = Calculator()
+>>> calc.multiply(5, 6)
+30
+\end{DoxyVerb}
+ \Hypertarget{classcalculator_1_1_calculator_a847d8433b1af180144acd50daf545703}\index{calculator.Calculator@{calculator.Calculator}!subtract@{subtract}}
+\index{subtract@{subtract}!calculator.Calculator@{calculator.Calculator}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}}
+{\footnotesize\ttfamily \label{classcalculator_1_1_calculator_a847d8433b1af180144acd50daf545703} 
+calculator.\+Calculator.\+subtract (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Виконує віднімання двох чисел.
+
+@param a: Зменшуване (число).
+@param b: Від'ємник (число).
+@return Різниця чисел a та b.
+
+@example
+>>> calc = Calculator()
+>>> calc.subtract(10, 4)
+6
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{calculator_8py}{calculator.\+py}}\end{DoxyCompactItemize}
